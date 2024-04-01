@@ -1,0 +1,102 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(
+        116deg,
+        #010101 0.37%,
+        #0a0f1a 33.79%,
+        #0e1524 51.27%,
+        #121b2e 70.81%,
+        #17233c 97.21%,
+        #2e487a 99.63%
+    );
+}
+
+.title {
+    font-size: 5rem;
+    color: #fff;
+    animation: flipTile 2s;
+}
+
+@keyframes flipTile {
+    from {
+        transform: rotateX(90deg);
+    }
+
+    to {
+        transform: rotateX(0deg);
+    }
+}
+
+.containerInput{
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    margin: 2rem 0;
+    display: flex;
+    border-radius: 0.5rem;
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.containerInput input{
+    background-color: transparent;
+    border: 0;
+    font-size: 1rem;
+    color: #fff;
+    outline: none;
+    margin-right: 0.5rem;
+}
+
+.containerInput input::placeholder{
+    color: #f1f1f1;
+}
+
+.buttonSearch{
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.buttonSearch:hover{
+    transform: scale(1.2);
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #8fa3df;
+    width: 25rem;
+    border-radius: 0.5rem;
+}
+
+.main h2{
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+.main span{
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+@media (max-width:620px){
+    .title{
+        font-size: 3rem;
+    }
+    .main h2{
+        font-size: 1.7rem;
+    }
+
+    .main{
+        width: 80%;
+        min-height: 15rem;
+    }
+}
